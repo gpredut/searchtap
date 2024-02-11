@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/main.js" type="module"></script>
+    <title>searchtap</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="offscreen">searchtap a Wikipedia powered search engine</h1>
+      <section class="searchEntry">
+        <h2 class="offscreen">Search term entry</h2>
+        <div class="logo" aria-hidden="true">
+          <p>
+            search<span class="light">tap </span>
+            <i class="fa-regular fa-hand-pointer"></i>
+          </p>
+        </div>
+        <form id="searchBar" class="searchBar">
+          <label class="offscreen" for="search"
+            >Enter a search term or phrase</label
+          >
+          <input id="search" type="text" autocomplete="off" />
+          <div
+            id="clear"
+            class="none button clear"
+            role="button"
+            aria-label="Clear search terms"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <button
+            id="searchButton"
+            class="button searchButton"
+            type="submit"
+            aria-label="Submit button"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </section>
+      <section class="results">
+        <h2 class="offscreen">Search Results</h2>
+        <div class="statsBar">
+          <div id="stats" class="stats" aria-live="assertive"></div>
+        </div>
+        <div id="searchResults" class="searchResults"></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <span aria-hidden="true">&lt;&lt;</span> Powered by
+        <a href="https://www.wikipedia.org" target="_blank">Wikipedia </a
+        ><span aria-hidden="true">&gt;&gt;</span>
+      </p>
+    </footer>
+  </body>
+</html>

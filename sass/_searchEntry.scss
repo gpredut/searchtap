@@ -1,0 +1,109 @@
+.searchEntry {
+  @include flexColumn;
+  padding-top: 40px;
+
+  .logo {
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    @include mediaQuery(768px) {
+      font-size: 2rem;
+    }
+
+    i {
+      font-size: 20px;
+      line-height: 1;
+      @include mediaQuery(768px) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .searchBar {
+    width: 90vw;
+    display: flex;
+    border: 2px solid $search-bar-border;
+    border-radius: 500px;
+    padding: 0.1rem 0.5rem;
+    @include mediaQuery(768px) {
+      width: 80vw;
+      padding: 0.3rem 0.7rem;
+    }
+    @include mediaQuery(1025px) {
+      width: 70vw;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      font-size: 0.7rem;
+      text-align: left;
+      outline: none;
+      border: none;
+      min-width: 150px;
+      @include mediaQuery(768px) {
+        font-size: 1rem;
+      }
+    }
+
+    .button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      min-width: 48px; //finger
+      min-height: 48px;
+      outline: none;
+
+      i {
+        font-size: 0.9rem;
+        @include mediaQuery(768px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .button:hover,
+    .button:focus {
+      i {
+        padding-bottom: 0.3rem;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+      }
+    }
+
+    .searchButton:hover,
+    .searchButton:focus {
+      i {
+        color: $logo-light;
+      }
+    }
+
+    .clear:hover,
+    .clear:focus {
+      i {
+        color: $clear-button-hover;
+      }
+    }
+
+    .searchButton {
+      @include mediaQuery(768px) {
+        padding-left: 1rem;
+      }
+    }
+
+    .clear {
+      justify-content: center;
+      align-items: center;
+      color: $stats-color;
+      border-right: thin solid $clear-button-color;
+      @include mediaQuery(768px) {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  .searchBar:hover,
+  .searchBar:focus-within {
+    box-shadow: 0 2px 5px 2px $search-bar-border;
+  }
+}
